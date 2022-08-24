@@ -10,7 +10,6 @@
       <v-list>
 
         <v-btn
-          left
           block
           depressed
           elevation="2"
@@ -22,6 +21,8 @@
             {{ icons.mdiHomeOutline }}
           </v-icon>
           <div style="padding-left: 10px">Главная</div>
+          <v-spacer/>
+
         </v-btn>
 
         <v-btn
@@ -36,9 +37,23 @@
             {{ icons.mdiAccountOutline }}
           </v-icon>
           <div style="padding-left: 10px">Авторизация</div>
-
+          <v-spacer/>
         </v-btn>
 
+        <v-btn
+          block
+          depressed
+          elevation="2"
+          plain
+          raised
+          to="/orders"
+        >
+          <v-icon>
+            {{ icons.mdiCartOutline }}
+          </v-icon>
+          <div style="padding-left: 10px">Заказы</div>
+          <v-spacer/>
+        </v-btn>
 
       </v-list>
     </v-navigation-drawer>
@@ -67,7 +82,6 @@
         <Nuxt/>
       </v-container>
     </v-main>
-
     <v-footer
       :absolute="!fixed"
       app
@@ -80,7 +94,7 @@
 <script>
 import {mdiHomeOutline} from '@mdi/js';
 import { mdiAccountOutline } from '@mdi/js';
-
+import { mdiCartOutline } from '@mdi/js';
 export default {
   name: 'DefaultLayout',
   data() {
@@ -92,10 +106,11 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
+      title: 'Личный кабинет дилера',
       icons: {
         mdiHomeOutline,
-        mdiAccountOutline
+        mdiAccountOutline,
+        mdiCartOutline
       }
     }
   }
