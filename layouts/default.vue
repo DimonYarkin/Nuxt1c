@@ -95,6 +95,7 @@
 import {mdiHomeOutline} from '@mdi/js';
 import { mdiAccountOutline } from '@mdi/js';
 import { mdiCartOutline } from '@mdi/js';
+
 export default {
   name: 'DefaultLayout',
   data() {

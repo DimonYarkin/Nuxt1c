@@ -1,11 +1,11 @@
 <template>
-
+<v-container>
+  <h1> Заказы</h1>
+</v-container>
 </template>
 
 <script>
-export default {
-  name: "orders"
-}
+
 </script>
 
 <style scoped>

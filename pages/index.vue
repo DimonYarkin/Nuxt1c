@@ -4,18 +4,11 @@
 <template >
 <v-container>
   <h1>
-    {{ title }}
+    Главная
   </h1>
 </v-container>
 </template>
 
 <script>
-export default {
-  data() {
-    return{
-      title: 'Главная'
-    }
-  }
 
-}
 </script>
