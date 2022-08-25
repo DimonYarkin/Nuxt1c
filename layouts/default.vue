@@ -7,7 +7,7 @@
       fixed
       app
     >
-      <v-list>
+      <v-list >
 
         <v-btn
           block
@@ -16,11 +16,12 @@
           plain
           raised
           to="/"
+          :class="$style.red"
         >
           <v-icon>
             {{ icons.mdiHomeOutline }}
           </v-icon>
-          <div style="padding-left: 10px">Главная</div>
+          <div style="padding-left: 10px" >Главная </div>
           <v-spacer/>
 
         </v-btn>
@@ -32,6 +33,7 @@
           plain
           raised
           to="/login"
+          :class="$style.red"
         >
           <v-icon>
             {{ icons.mdiAccountOutline }}
@@ -47,6 +49,7 @@
           plain
           raised
           to="/orders"
+          :class="$style.red"
         >
           <v-icon>
             {{ icons.mdiCartOutline }}
@@ -61,6 +64,7 @@
       :clipped-left="clipped"
       fixed
       app
+      :class="$style.red"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
 
@@ -90,6 +94,16 @@
     </v-footer>
   </v-app>
 </template>
+
+<style module>
+.red {
+  /*background-color: #c2e250;*/
+  background: linear-gradient(to right, #f5efef, #383733);
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  margin-top: 5px;
+}
+</style>
+
 
 <script>
 import {mdiHomeOutline} from '@mdi/js';
